@@ -1,17 +1,9 @@
-from mongoengine import (
-    connect,
-    Document,
-    StringField,
-    DateField,
-    ReferenceField,
-    ListField,
-    CASCADE,
-)
-from datetime import datetime
+from mongoengine import (CASCADE, DateField, Document, ListField,
+                         ReferenceField, StringField)
 
 
 class Author(Document):
-    fullname = StringField(required=True, max_length=50, unique=True)
+    fullname = StringField(required=True, max_length=120, unique=True)
     born_date = DateField()
     born_location = StringField(max_length=150)
     description = StringField()
