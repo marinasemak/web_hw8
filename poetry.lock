@@ -335,6 +335,35 @@ files = [
 cli = ["click (>=5.0)"]
 
 [[package]]
+name = "redis"
+version = "5.1.1"
+description = "Python client for Redis database and key-value store"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "redis-5.1.1-py3-none-any.whl", hash = "sha256:f8ea06b7482a668c6475ae202ed8d9bcaa409f6e87fb77ed1043d912afd62e24"},
+    {file = "redis-5.1.1.tar.gz", hash = "sha256:f6c997521fedbae53387307c5d0bf784d9acc28d9f1d058abeac566ec4dbed72"},
+]
+
+[package.extras]
+hiredis = ["hiredis (>=3.0.0)"]
+ocsp = ["cryptography (>=36.0.1)", "pyopenssl (==23.2.1)", "requests (>=2.31.0)"]
+
+[[package]]
+name = "redis-lru"
+version = "0.1.2"
+description = "LRU cache for Python. Use Redis as backend. Provides a dictionary-like object as well as a method decorator."
+optional = false
+python-versions = ">=3.4"
+files = [
+    {file = "redis-lru-0.1.2.tar.gz", hash = "sha256:01a648cb42d8efdb9472c5c42980da3dad4be4b6d45f2d9811ff6f69bcbfb164"},
+    {file = "redis_lru-0.1.2-py2.py3-none-any.whl", hash = "sha256:e6c2f56b43900b5a8f741d1db44bdcf423f228d6f3665f48a9ec6321c5579d0a"},
+]
+
+[package.dependencies]
+redis = "*"
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -359,4 +388,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "0e16964a9fc7db827ce92b99d9cf239506ea8f89129888ab20c1466b91516e5d"
+content-hash = "b8cd6f802aa6e2869c3f3bd3404fab6811c4bd9c3a0596270ea32937d8bade27"
